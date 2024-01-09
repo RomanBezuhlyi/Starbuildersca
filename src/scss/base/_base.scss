@@ -1,0 +1,123 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+  height: 100vh;
+  font-style: normal;
+}
+
+body {
+  background: $bg;
+  color: $text;
+  font-size: 20px;
+  font-family: $font-main;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 0.5px;
+  @media (max-width: 991px) {
+    font-size: 10px;
+    line-height: 12px;
+  }
+}
+h2 {
+  text-align: center;
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 76px;
+  letter-spacing: -1px;
+  @media (max-width: 991px) {
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.5px;
+  }
+}
+
+h4 {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 32px;
+  @media (max-width: 991px) {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+.primary {
+  color: $bg;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  padding: 12px 20px;
+  border-radius: 50px;
+  border: 1px solid $accent;
+  background: $accent;
+  box-shadow: 0px 4px 4px 0px $text;
+  @include transition;
+  &:hover {
+    opacity: 0.7;
+  }
+  &:active {
+    box-shadow: none;
+  }
+  @media (max-width: 991px) {
+    font-size: 10px;
+    box-shadow: 0px 2px 2px 0px $text;
+  }
+}
+
+.outline {
+  color: $accent;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  padding: 12px 20px;
+  border-radius: 50px;
+  background: $bg;
+  border: 1px solid $accent;
+  box-shadow: 0px 2px 4px 0px $text;
+  @include transition;
+  &:hover {
+    background: $violet;
+    box-shadow: 0px 2px 4px 0px $shadow;
+  }
+  &:active {
+    box-shadow: none;
+  }
+  @media (max-width: 991px) {
+    font-size: 10px;
+    box-shadow: 0px 2px 2px 0px $text;
+  }
+}
+
+input,
+textarea {
+  width: 100%;
+  color: $text;
+  font-family: $font-main;
+  font-size: 16px;
+  line-height: 140%;
+  padding: 13px 16px;
+  border-radius: 50px;
+  border-bottom: 1px solid $shadow;
+  background: $shadow;
+  opacity: 0.3;
+  resize: none;
+  &::placeholder {
+    color: $text;
+    font-family: $font-main;
+    font-size: 16px;
+    line-height: 140%;
+    @media (max-width: 991px) {
+      font-size: 10px;
+    }
+  }
+  @media (max-width: 991px) {
+    font-size: 10px;
+    padding: 6px 11px;
+  }
+}
