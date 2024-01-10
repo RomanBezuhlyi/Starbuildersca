@@ -12,9 +12,12 @@ body {
 body {
   background: $bg;
   color: $text;
-  font-size: 20px;
-  font-family: $font-main;
   font-style: normal;
+  font-family: $font-main;
+}
+
+p {
+  font-size: 20px;
   font-weight: 400;
   line-height: 32px;
   letter-spacing: 0.5px;

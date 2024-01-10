@@ -1,15 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Стартовый шаблон</title>
-		<link rel="stylesheet" href="./css/main.css" />
-	</head>
-	<body>
-		
-		
-		<script src="./js/index.bundle.js"></script>
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Star builders</title>
+    <link rel="icon" href="./img/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <header id="header" class="header-wrap">
+  <div class="container">
+    <div class="header">
+      <img class="header__logo" src="./img/logo.svg" alt="" />
+      <nav class="header__nav">
+        <a class="active" href="#">Home</a>
+        <a href="#">About Us</a>
+        <a href="#">Services</a>
+        <a href="#">Contact Us</a>
+        <a href="#"><img src="./img/icons/phone.svg" alt="" /></a>
+      </nav>
+      <a class="header__phone-mobile" href="#"
+        ><img src="./img/icons/phone-mobile.svg" alt="" />+1 (818) 282 6628</a
+      >
+      <button class="header__burger">
+        <img src="./img/icons/burger.svg" alt="" />
+      </button>
+    </div>
+    <div class="header-mobile">
+      <div class="header-mobile__top">
+        <img class="header__logo" src="./img/logo.svg" alt="" />
+        <button class="header__close">
+          <img src="./img/icons/close.svg" alt="" />
+        </button>
+      </div>
+      <div class="header-mobile__nav">
+        <a class="active" href="#">Home</a>
+        <a href="#">About Us</a>
+        <a href="#">Services</a>
+        <a href="#">Contact Us</a>
+        <a href="#"><img src="./img/icons/phone-mobile.svg" alt="" /></a>
+      </div>
+      <div class="header-mobile__social">
+        <img src="./img/icons/s-youtube.svg" alt="" />
+        <img src="./img/icons/s-twiter.svg" alt="" />
+        <img src="./img/icons/s-facebook.svg" alt="" />
+        <img src="./img/icons/s-unknown.svg" alt="" />
+      </div>
+    </div>
+  </div>
+</header>
+ 
+    <script src="./js/index.bundle.js"></script>
+  </body>
 </html>
