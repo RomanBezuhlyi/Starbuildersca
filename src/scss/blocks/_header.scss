@@ -13,8 +13,10 @@
 .header {
   @include flex(row, space-between, center);
   &__logo {
-    width: 63px;
-    height: 38px;
+    @media (max-width: 991px) {
+      width: 63px;
+      height: 38px;
+    }
   }
   &__nav {
     @include flex(row, flex-end, center);
