@@ -1,0 +1,121 @@
+.services-wrap {
+  margin-bottom: 69px;
+  @media (max-width: 991px) {
+    margin-bottom: 30px;
+  }
+}
+.services-title {
+  padding-bottom: 35px;
+  border-bottom: 2px solid $shadow;
+  margin-bottom: 35px;
+  @media (max-width: 991px) {
+    padding-bottom: 12px;
+    border-bottom: 1px solid $shadow;
+    margin-bottom: 12px;
+  }
+  h2 {
+    margin-bottom: 35px;
+    @media (max-width: 991px) {
+      margin-bottom: 10px;
+    }
+  }
+  p {
+    text-align: center;
+    width: 864px;
+    margin: auto;
+    @media (max-width: 991px) {
+      width: 100%;
+    }
+  }
+}
+
+.services {
+  &__list {
+    @include flex(row, center, center);
+    flex-wrap: wrap;
+    gap: 17px;
+    @media (max-width: 991px) {
+      gap: 12px;
+    }
+    @media (max-width: 400px) {
+      justify-content: space-between;
+    }
+    &-item {
+      position: relative;
+      @include flex(column, center, center);
+      width: 30%;
+      height: 297px;
+      overflow: hidden;
+      border-radius: 5px;
+      cursor: pointer;
+      @media (max-width: 991px) {
+        width: 150px;
+        height: 112px;
+        padding: 10px;
+      }
+      img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.7;
+        background: $shadow;
+        @include transition;
+      }
+      h3 {
+        position: relative;
+        z-index: 5;
+        color: $bg;
+        text-align: center;
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 32px;
+        text-transform: uppercase;
+        margin-bottom: 17px;
+        @media (max-width: 991px) {
+          font-size: 16px;
+          line-height: 20px;
+          margin-bottom: 0;
+        }
+      }
+      &--text {
+        position: relative;
+        z-index: 5;
+        @include flex(column, center, center);
+        height: 0;
+        overflow: hidden;
+        @include transition;
+        @media (max-width: 991px) {
+          display: none;
+        }
+        p {
+          color: $bg;
+          text-align: center;
+          margin-bottom: 16px;
+        }
+        a {
+          border-color: $bg;
+          color: $bg;
+          &:hover {
+            color: $accent;
+          }
+        }
+      }
+    }
+  }
+}
+.services__list-item:hover {
+  .services__list-item--text {
+    height: 165px;
+  }
+  .overlay {
+    background: $accent;
+  }
+}

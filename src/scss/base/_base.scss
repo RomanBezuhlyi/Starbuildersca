@@ -81,7 +81,7 @@ h4 {
   letter-spacing: 0.5px;
   padding: 12px 20px;
   border-radius: 50px;
-  background: $bg;
+  background: transparent;
   border: 1px solid $accent;
   box-shadow: 0px 2px 4px 0px $text;
   @include transition;
