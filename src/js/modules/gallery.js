@@ -1,15 +1,18 @@
 document.addEventListener("DOMContentLoaded", function () {
+  // Отримуємо всі кнопки-перемикачі та всі блоки-каруселі
   const switchVariants = document.querySelectorAll(".gallery__switch-variant");
+  const carousels = document.querySelectorAll(".gallery__carousel");
 
-  switchVariants.forEach(function (button) {
-    button.addEventListener("click", function () {
-      // Знімаємо клас 'active' з усіх кнопок
-      switchVariants.forEach(function (otherButton) {
-        otherButton.classList.remove("active");
-      });
+  // Додаємо обробник подій для кожної кнопки-перемикача
+  switchVariants.forEach((variant, index) => {
+    variant.addEventListener("click", function () {
+      // Видаляємо клас "active" у всіх кнопок та блоків
+      switchVariants.forEach((el) => el.classList.remove("active"));
+      carousels.forEach((el) => el.classList.remove("is-active"));
 
-      // Додаємо клас 'active' до натисканої кнопки
-      button.classList.add("active");
+      // Додаємо клас "active" поточній кнопці та відповідному блоку
+      this.classList.add("active");
+      carousels[index].classList.add("is-active");
     });
   });
 });
