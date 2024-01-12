@@ -43,15 +43,22 @@
     &-item {
       position: relative;
       @include flex(column, center, center);
-      width: 30%;
+      width: 32%;
+      padding: 10px;
       height: 297px;
       overflow: hidden;
       border-radius: 5px;
       cursor: pointer;
+      @media (max-width: 1200px) {
+        width: 30%;
+      }
       @media (max-width: 991px) {
         width: 150px;
         height: 112px;
         padding: 10px;
+      }
+      @media (max-width: 350px) {
+        width: 100%;
       }
       img {
         position: absolute;
