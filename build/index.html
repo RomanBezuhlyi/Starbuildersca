@@ -7,6 +7,11 @@
     <title>Star builders</title>
     <link rel="icon" href="./img/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="./css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   </head>
   <body>
     <header id="header" class="header-wrap">
@@ -264,6 +269,58 @@
       </div>
       <img src="./img/about-us.png" alt="" />
       <a class="primary" href="#">Contact Us</a>
+    </div>
+  </div>
+</section>
+ <section id="gallery" class="gallery-wrap">
+  <div class="gallery">
+    <h2>General Contractor Gallery</h2>
+    <div class="gallery__switch">
+      <button class="gallery__switch-variant active">
+        New Home Construction
+      </button>
+      <button class="gallery__switch-variant">Home Remodeling</button>
+      <button class="gallery__switch-variant">Kitchen Remodeling</button>
+      <button class="gallery__switch-variant">Bathroom Remodeling</button>
+      <button class="gallery__switch-variant">ADU/Garage Conversions</button>
+      <button class="gallery__switch-variant">Home Additions</button>
+    </div>
+    <div class="gallery__carousel">
+      <div class="gallery__slider swiper">
+        <div class="swiper-wrapper">
+          <img
+            class="gallery__slide swiper-slide"
+            src="./img/slide-2.jpg"
+            alt=""
+          />
+          <img
+            class="gallery__slide swiper-slide"
+            src="./img/slide-1.jpg"
+            alt=""
+          />
+          <img
+            class="gallery__slide swiper-slide"
+            src="./img/slide-2.jpg"
+            alt=""
+          />
+          <img
+            class="gallery__slide swiper-slide"
+            src="./img/slide-3.jpg"
+            alt=""
+          />
+          <img
+            class="gallery__slide swiper-slide"
+            src="./img/slide-1.jpg"
+            alt=""
+          />
+        </div>
+      </div>
+      <button class="gallery__slider-prev">
+        <img src="./img/arr-left.svg" alt="" />
+      </button>
+      <button class="gallery__slider-next">
+        <img src="./img/arr-right.svg" alt="" />
+      </button>
     </div>
   </div>
 </section>
