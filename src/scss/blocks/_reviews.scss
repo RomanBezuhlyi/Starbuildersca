@@ -1,0 +1,151 @@
+.reviews-wrap {
+  margin-bottom: 70px;
+  @media (max-width: 991px) {
+    margin-bottom: 30px;
+  }
+}
+
+.reviews {
+  h2 {
+    margin-bottom: 40px;
+    @media (max-width: 991px) {
+      margin-bottom: 11px;
+    }
+  }
+  &__carousel {
+    position: relative;
+  }
+  &__carousel-prev {
+    @include flex(row, center, center);
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    @media (max-width: 991px) {
+      width: 31.354px;
+      height: 35px;
+    }
+    @media (max-width: 480px) {
+      top: 35%;
+    }
+    @media (max-width: 360px) {
+      top: 33%;
+    }
+  }
+  &__carousel-next {
+    @include flex(row, center, center);
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    @media (max-width: 991px) {
+      width: 31.354px;
+      height: 35px;
+    }
+    @media (max-width: 480px) {
+      top: 35%;
+    }
+    @media (max-width: 360px) {
+      top: 33%;
+    }
+  }
+  &__slide {
+    display: flex !important;
+    @include flex(row, flex-start, center);
+    padding: 0 100px;
+    @media (max-width: 991px) {
+      @include flex(column, flex-start, flex-start);
+    }
+    @media (max-width: 768px) {
+      padding: 0 50px;
+    }
+    @media (max-width: 480px) {
+      padding: 0;
+    }
+    &-left {
+      width: 20%;
+      @include flex(column, flex-start, flex-start);
+      @media (max-width: 991px) {
+        justify-content: center;
+        width: 100%;
+      }
+      @media (max-width: 768px) {
+        align-items: center;
+      }
+    }
+    &-right {
+      width: 80%;
+      @include flex(column, flex-start, flex-start);
+      @media (max-width: 991px) {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+    &-avatar {
+      width: 101px;
+      height: 101px;
+      border-radius: 101px;
+      object-fit: cover;
+      margin-bottom: 19px;
+      @media (max-width: 991px) {
+        width: 55px;
+        height: 55px;
+        border-radius: 55px;
+        margin-bottom: 3px;
+      }
+    }
+    &-stars {
+      @media (max-width: 991px) {
+        width: 65px;
+        margin-bottom: 7px;
+      }
+    }
+    &-name {
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 28px;
+      text-transform: uppercase;
+      margin-bottom: 11px;
+      margin-right: auto;
+      @media (max-width: 991px) {
+        font-size: 16px;
+        line-height: 16px;
+      }
+      @media (max-width: 768px) {
+        margin: auto;
+        margin-bottom: 12px;
+      }
+    }
+    &-positive {
+      margin-bottom: 11px;
+      @media (max-width: 991px) {
+        margin-right: auto;
+      }
+    }
+    &-text {
+      @include flex(row, flex-start, flex-start);
+      gap: 15px;
+      margin-bottom: 19px;
+      @media (max-width: 991px) {
+        gap: 9px;
+        margin-bottom: 12px;
+      }
+      img {
+        @media (max-width: 991px) {
+          width: 33px;
+          height: 23px;
+        }
+      }
+    }
+    &-service {
+      @media (max-width: 991px) {
+        margin-right: auto;
+      }
+    }
+  }
+}
