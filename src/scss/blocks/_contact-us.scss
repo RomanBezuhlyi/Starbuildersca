@@ -1,0 +1,70 @@
+.contact-us-wrap {
+  margin-bottom: 70px;
+  @media (max-width: 991px) {
+    margin-bottom: 30px;
+  }
+}
+.contact-us {
+  @include flex(row, center, center);
+  gap: 20px;
+  @media (max-width: 991px) {
+    @include flex(column, center, center);
+    gap: 0;
+  }
+  &__info {
+    width: 50%;
+    height: 442px;
+    background-color: $violet;
+    padding: 60px 43px 80px 175px;
+    @include flex(column, center, center);
+    @media (max-width: 991px) {
+      @include flex(column, flex-start, flex-start);
+      width: 100%;
+      height: auto;
+      padding: 28px 20px;
+    }
+    h2 {
+      margin-bottom: 60px;
+      @media (max-width: 991px) {
+        margin-left: 25px;
+        margin-bottom: 22px;
+      }
+    }
+    &-list {
+      @include flex(column, center, flex-start);
+      gap: 60px;
+      @media (max-width: 991px) {
+        gap: 22px;
+      }
+      a {
+        @include flex(row, flex-start, center);
+        gap: 44px;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 32px;
+        letter-spacing: 0.5px;
+        @media (max-width: 991px) {
+          gap: 16px;
+          font-size: 16px;
+          line-height: 16px;
+        }
+        img {
+          @media (max-width: 991px) {
+            width: 13px;
+          }
+        }
+      }
+    }
+  }
+  &__map {
+    position: relative;
+    right: 0;
+    width: 50%;
+    height: 442px;
+    overflow: hidden;
+    @media (max-width: 991px) {
+      width: 100%;
+      height: 215px;
+    }
+  }
+}
