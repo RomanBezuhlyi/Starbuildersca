@@ -5,6 +5,34 @@
   }
 }
 .gallery {
+  &__title {
+    position: relative;
+    padding-bottom: 35px;
+    border-bottom: 3px solid $shadow;
+    margin-bottom: 30px !important;
+    @media (max-width: 991px) {
+      margin-bottom: 15px !important;
+      padding-bottom: 12px;
+      border-bottom: 1px solid $shadow;
+    }
+    &::after {
+      content: "";
+      display: block;
+      width: 617px;
+      height: 3px;
+      background-color: $accentSecond;
+      position: absolute;
+      bottom: -3px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 10;
+      @media (max-width: 991px) {
+        width: 50%;
+        height: 1px;
+        bottom: -1px;
+      }
+    }
+  }
   h2 {
     margin-bottom: 50px;
     @media (max-width: 991px) {

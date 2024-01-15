@@ -1,5 +1,5 @@
 .header-wrap {
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -81,4 +81,24 @@
     gap: 25px;
     margin-top: 46px;
   }
+}
+
+.header__nav {
+  position: relative;
+}
+
+.dropdown {
+  position: absolute;
+  top: 25px;
+  right: 0;
+  background-color: rgba($color: $violet, $alpha: 0.2);
+  padding: 5px 15px;
+  border: 1px solid $shadow;
+  @include flex(column, flex-start, flex-start);
+  display: none;
+  gap: 13px;
+  z-index: 10;
+}
+.drodown-open.active + .dropdown {
+  display: flex !important;
 }
