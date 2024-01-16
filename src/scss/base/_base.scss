@@ -107,9 +107,7 @@ textarea {
   line-height: 140%;
   padding: 13px 16px;
   border-radius: 50px;
-  border-bottom: 1px solid $shadow;
-  background: $shadow;
-  opacity: 0.3;
+  background: rgba($color: $shadow, $alpha: 0.3);
   resize: none;
   &::placeholder {
     color: $text;
