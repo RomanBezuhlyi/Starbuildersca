@@ -102,6 +102,12 @@
   &:hover {
     display: flex !important;
   }
+  @media (max-width: 991px) {
+    padding: 5px;
+    background-color: $violet;
+    top: 210px;
+    right: 5px;
+  }
 }
 .drodown-open:hover + .dropdown {
   display: flex !important;

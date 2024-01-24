@@ -26,6 +26,7 @@ var swiper = new Swiper(".gallery__slider-1", {
   initialSlide: 2,
   spaceBetween: 7,
   centeredSlides: true,
+  loop: true,
   breakpoints: {
     768: {
       slidesPerView: 2.5,
@@ -43,6 +44,7 @@ var swiper = new Swiper(".gallery__slider-2", {
   initialSlide: 2,
   spaceBetween: 7,
   centeredSlides: true,
+  loop: true,
   breakpoints: {
     768: {
       slidesPerView: 2.5,
@@ -60,6 +62,7 @@ var swiper = new Swiper(".gallery__slider-3", {
   initialSlide: 2,
   spaceBetween: 7,
   centeredSlides: true,
+  loop: true,
   breakpoints: {
     768: {
       slidesPerView: 2.5,
@@ -77,6 +80,7 @@ var swiper = new Swiper(".gallery__slider-4", {
   initialSlide: 2,
   spaceBetween: 7,
   centeredSlides: true,
+  loop: true,
   breakpoints: {
     768: {
       slidesPerView: 2.5,
@@ -94,6 +98,7 @@ var swiper = new Swiper(".gallery__slider-5", {
   initialSlide: 2,
   spaceBetween: 7,
   centeredSlides: true,
+  loop: true,
   breakpoints: {
     768: {
       slidesPerView: 2.5,
@@ -111,6 +116,7 @@ var swiper = new Swiper(".gallery__slider-6", {
   initialSlide: 2,
   spaceBetween: 7,
   centeredSlides: true,
+  loop: true,
   breakpoints: {
     768: {
       slidesPerView: 2.5,
