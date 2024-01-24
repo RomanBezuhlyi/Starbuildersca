@@ -30,6 +30,11 @@
     }
     a {
       @include flex(row, center, center);
+      font-weight: 500;
+      @include transition;
+      &:hover {
+        color: $accent;
+      }
       @media (max-width: 991px) {
         img {
           width: 15px;
@@ -94,7 +99,148 @@
   display: none;
   gap: 13px;
   z-index: 10;
+  &:hover {
+    display: flex !important;
+  }
 }
-.drodown-open.active + .dropdown {
+.drodown-open:hover + .dropdown {
   display: flex !important;
+}
+
+.contacts {
+  position: fixed;
+  right: 15px;
+  bottom: 20px;
+  z-index: 999;
+  width: 56px;
+  height: 75px;
+  @include transition;
+  border-radius: 50px;
+  animation: pulse 1s infinite;
+  cursor: pointer;
+  @media (max-width: 991px) {
+    width: 40px;
+    height: 40px;
+  }
+  &:hover {
+    width: 90px;
+    animation: none;
+    border-radius: 50px;
+    & > .btn-call {
+      right: 50px;
+      pointer-events: all;
+      opacity: 1;
+    }
+    & > .btn-form {
+      right: 25px;
+      top: -40px;
+      pointer-events: all;
+      opacity: 1;
+    }
+  }
+}
+
+.btn-main {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 48px;
+  color: $bg;
+  width: 56px;
+  height: 56px;
+  @include flex(row, center, center);
+  z-index: 111;
+  background: $accent;
+  box-shadow: 0px 2px 4px 0px $shadow;
+  text-align: center;
+  @include transition;
+  border-radius: 50%;
+  cursor: pointer;
+  @media (max-width: 991px) {
+    width: 40px;
+    height: 40px;
+  }
+  svg {
+    width: 75%;
+  }
+}
+
+.btn-call {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  color: $text;
+  padding: 5px 15px;
+  @include flex(row, center, center);
+  gap: 10px;
+  z-index: 100;
+  background: $bg;
+  border: 1px solid $accent;
+  box-shadow: 0px 2px 4px 0px $shadow;
+  @include transition;
+  border-radius: 30px;
+  pointer-events: none;
+  white-space: nowrap;
+  opacity: 0;
+  &:hover {
+    color: $accent;
+  }
+  @media (max-width: 991px) {
+    padding: 5px;
+    width: 38px;
+    height: 38px;
+    gap: 0;
+    border-radius: 100%;
+    span {
+      display: none;
+    }
+  }
+}
+
+.btn-form {
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: $text;
+  padding: 5px 15px;
+  @include flex(row, center, center);
+  gap: 10px;
+  z-index: 100;
+  background: $bg;
+  border: 1px solid $accent;
+  box-shadow: 0px 2px 4px 0px $shadow;
+  @include transition;
+  border-radius: 30px;
+  pointer-events: none;
+  white-space: nowrap;
+  opacity: 0;
+  &:hover {
+    color: $accent;
+  }
+  img {
+    width: 20px;
+  }
+  @media (max-width: 991px) {
+    padding: 5px;
+    width: 38px;
+    height: 38px;
+    gap: 0;
+    border-radius: 100%;
+    span {
+      display: none;
+    }
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
