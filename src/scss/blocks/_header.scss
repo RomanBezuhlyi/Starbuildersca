@@ -109,8 +109,8 @@
 
 .contacts {
   position: fixed;
-  right: 15px;
-  bottom: 20px;
+  right: 25px;
+  bottom: 45px;
   z-index: 999;
   width: 56px;
   height: 75px;
@@ -123,20 +123,68 @@
     height: 40px;
   }
   &:hover {
+    width: 250px;
+    animation: none;
+    border-radius: 100px 50px 50px 25px;
+    @media (max-width: 991px) {
+      width: 90px;
+      animation: none;
+      border-radius: 50px;
+    }
+    & > .btn-call {
+      right: 60px;
+      pointer-events: all;
+      opacity: 1;
+      @media (max-width: 991px) {
+        right: 50px;
+        pointer-events: all;
+        opacity: 1;
+      }
+    }
+    & > .btn-form {
+      right: 60px;
+      top: 0;
+      pointer-events: all;
+      opacity: 1;
+      @media (max-width: 991px) {
+        right: 25px;
+        top: -40px;
+        pointer-events: all;
+        opacity: 1;
+      }
+    }
+  }
+}
+.contacts-bottom-text {
+  position: fixed;
+  bottom: 10px;
+  right: 5px;
+  color: $bg;
+  padding: 5px;
+  border-radius: 15px;
+  background-color: $accent;
+  z-index: 111;
+  @media (max-width: 991px) {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 991px) {
+  .contacts:hover {
     width: 90px;
     animation: none;
     border-radius: 50px;
-    & > .btn-call {
-      right: 50px;
-      pointer-events: all;
-      opacity: 1;
-    }
-    & > .btn-form {
-      right: 25px;
-      top: -40px;
-      pointer-events: all;
-      opacity: 1;
-    }
+  }
+  .contacts:hover > .btn-call {
+    right: 50px;
+    pointer-events: all;
+    opacity: 1;
+  }
+  .contacts:hover > .btn-form {
+    right: 25px;
+    top: -40px;
+    pointer-events: all;
+    opacity: 1;
   }
 }
 
